@@ -1,0 +1,14 @@
+%header
+  %a.save Save
+  %a.delete Deleeeete
+
+.content
+  %form
+    %label
+      %span Name
+      %input{type:'text', name:'name', value:@name }
+
+    %label
+      %span Number
+      %input{type:'text', name:'number', value:@number}
+    %button Save

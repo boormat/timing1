@@ -1,0 +1,27 @@
+(function() {
+  var _ref;
+
+  if ((_ref = window.HAML) == null) {
+    window.HAML = {};
+  }
+
+  window.HAML['app/views/form'] = function(context) {
+    return (function() {
+      var $c, $e, $o;
+      $e = function(text, escape) {
+        return ("" + text).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/'/g, '&apos;').replace(/"/g, '&quot;');
+      };
+      $c = function(text) {
+        if (text === null || text === void 0) {
+          return '';
+        } else {
+          return text;
+        }
+      };
+      $o = [];
+      $o.push("<header>\n  <a class='save'>Save</a>\n  <a class='delete'>Deleeeete</a>\n</header>\n<div class='content'>\n  <form>\n    <label>\n      <p>" + ($e($c("" + this.name))) + "</p>\n      <p>@name </p>\n      <span>Name</span>\n      <input>\n    </label>\n    <label>\n      <span>Number</span>\n      <input>\n    </label>\n    <button>Save</button>\n  </form>\n</div>");
+      return $o.join("\n").replace(/\s(\w+)='true'/mg, ' $1').replace(/\s(\w+)='false'/mg, '');
+    }).call(context);
+  };
+
+}).call(this);
